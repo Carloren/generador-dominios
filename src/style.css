@@ -27,3 +27,7 @@ body{
 #button > p{
     font-size: large;
 }
+
+#domain {
+    margin-bottom: 100px;
+}

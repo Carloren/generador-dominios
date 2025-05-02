@@ -1,6 +1,6 @@
 import "bootstrap";
 import "./style.css";
-// --> Comentar todos los import para probar directamente en la consola y que no de error de extensión de archivo
+                                                                  // --> Comentar todos los import para probar directamente en la consola y que no de error de extensión de archivo
 
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
@@ -18,8 +18,8 @@ function domainGen() {
     for (let adj of adjs) {
       for (let noun of nouns) {
         for (let ext of exts) {
-          if (noun.endsWith(ext.substring(1))) {
-            domains += 'www.' + pronoun + adj + noun.substring(0, (noun.length - ext.length + 1 )) + ext + '\n' // --> aquí integramos la extensión con el nombre si este termina igual que la extensión
+          if (noun.endsWith(ext.substring(1))) {                  // --> aquí integramos la extensión con el nombre si este termina igual que la extensión
+            domains += 'www.' + pronoun + adj + noun.substring(0, (noun.length - ext.length + 1 )) + ext + '\n' 
           } else {
             domains += 'www.' + pronoun + adj + noun + ext + '\n'
           }

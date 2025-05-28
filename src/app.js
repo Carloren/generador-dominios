@@ -18,20 +18,22 @@ function domainGen() {
       for (let noun of nouns) {
         for (let ext of exts) {
           if (noun.endsWith(ext.substring(1))) {
-            domains += `www.${pronoun}${adj}${noun.substring(0, (noun.length - ext.length + 1))}${ext}
+            domains += `<li class="list-group-item">www.${pronoun}${adj}${noun.substring(0, (noun.length - ext.length + 1))}${ext}</li>
             `
+            console.log(`www.${pronoun}${adj}${noun.substring(0, (noun.length - ext.length + 1))}${ext}`);
+
           } else {
-            domains += `www.${pronoun}${adj}${noun}${ext}
+            domains += `<li class="list-group-item">www.${pronoun}${adj}${noun}${ext}</li>
             `
+            console.log(`www.${pronoun}${adj}${noun}${ext}`);
+
           }
         }
       }
     }
   }
 
-  console.log(domains)
-
-  document.getElementById("domain").innerText = domains;
+  document.getElementById("domain").innerHTML = domains;
 
 };
 document.getElementById("button").onclick = domainGen;
